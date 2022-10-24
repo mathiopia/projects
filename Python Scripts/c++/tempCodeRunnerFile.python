@@ -1,0 +1,12 @@
+from this import d
+import numpy as np 
+import matplotlib.pyplot as plt
+np.random.seed(100000)
+data={'a': np.arange(50),
+    'c':   np.random.randint(10,60),
+    'd': np.random.randn(60),
+    'e': np.random.randn(40)}
+data['b']=data['a']+10*np.random.randn(50)
+data['d']=np.abs(data['d'])*100
+fig,ax=plt.subplots(figsize=(10,10),layout='constrained')
+ax.scatter('a','b',data=data)
